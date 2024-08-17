@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/img/flag.png" type="image/png">
+<title>Login/Register Form</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap">
+<!--=============== CSS ===============-->
+<link rel="stylesheet" href="/css/login.css">
+
+</head>
+<body>
+
+<div class="login-page">
+  <div class="center">
+    <h1>Login/Register Form</h1>
+    <form id="loginForm" class="login-form">
+      <div class="txt_field">
+        <input type="text" id="loginUsername" required>
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="loginPassword" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <input type="submit" value="Login">
+      <!-- Include Forgot Password link here -->
+      <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+    </form>
+    <form id="registerForm" class="register-form" style="display:none;">
+      <div class="txt_field">
+        <input type="text" id="registerUsername" required>
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="registerPassword" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <input type="submit" value="Register">
+    </form>
+    <div class="signup_link">
+      <p id="switchForm">Don't have an account? Register here. <a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+    </div>
+  </div>
+</div>
+
+<!--=============== Log In JS ===============-->
+<script src="/js/login.js"></script>
+
+</body>
+</html>

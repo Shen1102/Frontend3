@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Website Tutorial</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" >
+  
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  
+  <!--=============== CSS FOR ALL THE CONTENTS IN MAINPAGE ===============-->
+  <link rel="stylesheet" href="/css/mainpage.css">
+  
+  <!--=============== CSS SOLELY FOR PARALLAX EFFECT ===============-->
+  <link rel="stylesheet" href="/css/parallax.css">
+
+</head>
+
+<body>
+    <!-- Cookies Consent -->
+    <div id="cookieConsentModal" class="cookie-modal">
+        <div class="cookie-modal-content">
+          <p>We use cookies to improve your experience on our site. By using our site, you agree to our <a href="terms-and-conditions.html">Terms and Conditions</a>.</p>
+          <button id="acceptCookies">I Agree</button>
+        </div>
+      </div>
+
+
+    
+    <!-- Nav Bar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Malaysia</a>
+    
+            <div class="hamburger" id="hamburger-menu">
+                <a href="#" onclick="return false;">
+                    <div class="bar"></div>
+                </a>
+            </div>
+            
+            <div class="nav__item" id="login">
+                <a href="login.html" class="nav__link" id="loginButton">Login</a>
+            </div>
+    
+    
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#discover" class="nav__link">Discover</a></li>
+                    <li class="nav__item"><a href="#map-section" class="nav__link">Map</a></li>
+                    <li class="nav__item"><a href="#card" class="nav__link">More</a></li>
+                    <li class="nav__item search">
+                        <a href="#" class="nav__link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="nav__item theme-switch">
+                <span class="change-theme-name">Dark mode</span>
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+            </div>
+
+            <div id="usernameDisplay">
+                <a href="#" id="usernameLink"></a>
+            </div>
+            <div id="logoutDisplay">
+                <a href="#" id="logoutButton">Logout</a>
+            </div>
+            <i class="ri-close-line nav__close" id="nav-close"></i>
+
+        </nav>
+    </header>
+
+
+    <!-- Parallax Scrolling Effect -->
+  <main>
+    <div class="vignette hide"></div>
+    <img src="img/background.png" data-speedx="0.003" data-speedy="0.038" data-speedz="0" data-rotation="0"
+      data-distance="-200" class="parallax bg-img">
+    <img src="img/fog_7.png" data-speedx="0.27" data-speedy="0.32" data-speedz="0" data-rotation="0" data-distance="850"
+      class="parallax fog-7">
+    <img src="img/building_10.png" data-speedx="0.195" data-speedy="0.305" data-speedz="0" data-rotation="0"
+      data-distance="1100" class="parallax building-10">
+    <img src="img/fog_6.png" data-speedx="0.25" data-speedy="0.28" data-speedz="0" data-rotation="0"
+      data-distance="1400" class="parallax fog-6">
+    <img src="img/building_9.png" data-speedx="0.125" data-speedy="0.155" data-speedz="0.15" data-rotation="0.02"
+      data-distance="1700" class="parallax building-9">
+    <img src="img/building_8.png" data-speedx="0.1" data-speedy="0.11" data-speedz="0" data-rotation="0.02"
+      data-distance="1800" class="parallax building-8">
+    <img src="img/fog_5.png" data-speedx="0.16" data-speedy="0.105" data-speedz="0" data-rotation="0"
+      data-distance="1900" class="parallax fog-5">
+    <img src="img/building_7.png" data-speedx="0.1" data-speedy="0.1" data-speedz="0" data-rotation="0.09"
+      data-distance="2000" class="parallax building-7">
+    <div class="text parallax" data-speedx="0.07" data-speedy="0.07" data-speedz="0" data-rotation="0.11">
+      <h2>Welcome</h2>
+      <h1>Malaysia</h1>
+    </div>
+    <img src="img/building_6.png" data-speedx="0.065" data-speedy="0.05" data-speedz="0.05" data-rotation="0.12"
+      data-distance="2300" class="parallax building-6">
+    <img src="img/fog_4.png" data-speedx="0.135" data-speedy="0.04" data-speedz="0" data-rotation="0"
+      data-distance="2400" class="parallax fog-4">
+    <img src="img/building_5.png" data-speedx="0.08" data-speedy="0.03" data-speedz="0.13" data-rotation="0.1"
+      data-distance="2550" class="parallax building-5">
+    <img src="img/fog_3.png" data-speedx="0.11" data-speedy="0.018" data-speedz="0" data-rotation="0"
+      data-distance="2800" class="parallax fog-3">
+    <img src="img/building_4.png" data-speedx="0.059" data-speedy="0.024" data-speedz="0.35" data-rotation="0.14"
+      data-distance="3200" class="parallax building-4">
+    <img src="img/building_3.png" data-speedx="0.04" data-speedy="0.018" data-speedz="0.32" data-rotation="0.05"
+      data-distance="3400" class="parallax building-3">
+    <img src="img/fog_2.png" data-speedx="0.15" data-speedy="0.0115" data-speedz="0" data-rotation="0"
+      data-distance="3600" class="parallax fog-2">
+    <img src="img/building_2.png" data-speedx="0.0235" data-speedy="0.013" data-speedz="0.42" data-rotation="0.15"
+      data-distance="3800" class="parallax building-2">
+    <img src="img/building_1.png" data-speedx="0.027" data-speedy="0.018" data-speedz="0.53" data-rotation="0.2"
+      data-distance="4000" class="parallax building-1">
+    <img src="img/sun_rays.png" class="sun-rays hide">
+    <img src="img/black_shadow.png" class="black-shadow hide">
+    <img src="img/fog_1.png" data-speedx="0.12" data-speedy="0.01" data-speedz="0" data-rotation="0"
+      data-distance="4200" class="parallax fog-1">
+  </main>
+
+  <!-- Live Counter -->
+    <section class="live-counter section" id="live-counter">
+        <div class="counter-wrapper">
+            <div class="counter">
+                <div class="counter-logo">
+                    <img src="/img/population.jpg" alt="Logo">
+                </div>
+                <h1 class="count" data-target="34671895">0</h1>
+                <p>Populations</p>
+            </div>
+            <div class="counter">
+                <div class="counter-logo">
+                    <img src="/img/plane.jpg" alt="Logo">
+                </div>
+                <h1 class="count" data-target="11808937">0</h1>
+                <p>Tourist Arrivals</p>
+            </div>
+            <div class="counter">
+                <div class="counter-logo">
+                    <img src="/img/money.jpg" alt="Logo">
+                </div>
+                <h1 class="count" data-target="11993">0</h1>
+                <p>GDP Per Capital</p>
+            </div>
+            <div class="counter">
+                <div class="counter-logo">
+                    <img src="/img/flag.jpg" alt="Logo">
+                </div>
+                <h1 class="count" data-target="16">0</h1>
+                <p>States and Federal Federal Territories</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Section  -->
+    <section class="about section" id="about">
+        <div class="about__container container grid">
+            <div class="about__data">
+                <h2 class="section_title about_title">Discover Malaysia: A Tropical Paradise</h2>
+                <p class="about__description">Welcome to Malaysia, a vibrant nation where diverse cultures, breathtaking landscapes, and exhilarating experiences await you! Nestled in the heart of Southeast Asia, Malaysia is a tapestry of natural wonders, modern marvels, and rich heritage.</p>
+                <button class="button read-more-btn">Read More</button>
+            </div>
+    
+            <div class="about__img">
+                <div class="about__img-overlay">
+                    <img src="/img/about1.jpg" alt="" class="about__img-one">
+                </div>
+    
+                <div class="about__img-overlay">
+                    <img src="/img/about2.jpg" alt="" class="about__img-two">
+                </div>
+            </div>
+        </div>
+    
+        <div class="popup-overlay" id="aboutModal">
+            <div class="popup-content">
+                <span class="close-btn"><i class="fas fa-times-circle"></i></span>
+                <h2>Discover Malaysia: A Tropical Paradise</h2>
+                <img src="/img/about3.jpg" alt="" class="popup-img">  
+                <h3>Natural Wonders:</h3>
+                <ul>
+                    <li><strong>Breathtaking Beaches:</strong> From the pristine white sands of Langkawi to the idyllic islands of the Perhentian and Tioman, Malaysia's beaches are a sun-seeker's paradise.</li>
+                    <li><strong>Rainforest Adventures:</strong> Explore the ancient rainforests of Sabah and Sarawak, home to unique wildlife and lush landscapes. Don't miss the breathtaking Mulu Caves or the Kinabatangan River safari.</li>
+                    <li><strong>Majestic Mountains:</strong> Conquer the heights of Mount Kinabalu or enjoy cooler climates in the Cameron Highlands, renowned for their tea plantations and stunning vistas.</li>
+                </ul>
+
+                <h3>Cultural Riches:</h3>
+                <ul>
+                    <li><strong>Cultural Fusion:</strong> Experience a melting pot of cultures in Kuala Lumpur, where modern skyscrapers blend seamlessly with historic temples and vibrant street markets.</li>
+                    <li><strong>Heritage Sites:</strong> Discover the historical charm of George Town in Penang and the historic city of Malacca, both UNESCO World Heritage Sites.</li>
+                </ul>
+
+                <h3>Thrilling Experiences:</h3>
+                <ul>
+                    <li><strong>Urban Excitement:</strong> Enjoy the bustling nightlife and shopping districts of Kuala Lumpur, with landmarks like the Petronas Twin Towers and the vibrant Bukit Bintang area.</li>
+                    <li><strong>Adventure Awaits:</strong> From diving in crystal-clear waters to jungle trekking and zip-lining, Malaysia offers thrilling adventures for all types of travelers.</li>
+                </ul>
+
+                <h3>Delightful Cuisine:</h3>
+                <p><strong>Gastronomic Journey:</strong> Savor Malaysia's diverse culinary offerings, from mouth-watering street food in Penang to traditional Nasi Lemak and Satay. Each region brings its own unique flavors and dishes.</p>
+        
+                <p>Come and immerse yourself in Malaysia's natural beauty, rich culture, and unforgettable adventures. Whether you seek relaxation, exploration, or cultural discovery, Malaysia promises a memorable experience for every traveler.</p>
+            </div>
+        </div>
+         
+    </section>
+
+  <!--==================== VIDEO ====================-->
+<section class="video section" id="discover">
+    <h2 class="section__title">Video Tour</h2>
+
+    <div class="video__container container">
+        <p class="video__description">Find out from our captivating video how Malaysia’s unique culture unfolds.</p>
+
+        <div class="video__content">
+            <video id="video-file">
+                <source src="/video/video.mp4" type="video/mp4">
+            </video>
+
+            <button class="button button--flex video__button" id="video-button">
+                <i class="ri-play-line video__button-icon" id="video-icon"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Map Section -->
+    <section id="map-section">
+        <h2 class="section__title">Map Selector</h2>
+        <p class="map__description">Explore Malaysia through this interactive map, featuring 13 vibrant states and 3 dynamic Federal Territories. Click on any region to dive deeper into the wonders of Malaysia and uncover its rich culture, stunning landscapes, and hidden treasures.</p>
+        <div class="swiper-container">
+        <div id="map-container">
+            <object type="image/svg+xml" data="/svg/my.svg" id="svgMap"></object>
+            <div id="map-buttons">
+                <button id="zoomIn" class="map__button">+</button>
+                <button id="zoomOut" class="map__button">-</button>
+                <button id="resetView" class="map__button">Reset View</button>
+            </div>
+        </div>
+        <div id="info">
+            <div id="name">
+                <p id="namep"></p>
+            </div>
+        </div>
+
+        <!-- Fullscreen Popup for Map Section (Hidden initially) -->
+        <div class="map-popup-overlay" id="mapPopupOverlay">
+            <div class="map-popup-content">
+                <button class="close-popup-btn" aria-label="Close popup">&times;</button>
+                <h2 class="popup-title"></h2>
+                <a href="#" class="popup-link">Go to Region Site</a>
+            </div>
+        </div>
+    </section>
+
+    <!----- REGION SELECTOR ------>
+    <section class="slider-container-box" id="card">
+        <h2 class="section__title">States Cards</h2>
+        <p class="region__description">Discover the diverse charm of Malaysia by exploring our featured regions below. Each card offers a gateway to unique experiences—click on a region to embark on your journey and uncover the stories, attractions, and wonders that await you.</p>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/perlisbg.jpg);">
+                        <div class="content">
+                            <div class="name">Perlis</div>
+                            <div class="des">Known for its serene countryside, Perlis is Malaysia's smallest state, offering tranquil paddy fields and limestone hills.</div>
+                            <a href="perlis.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/kedahbg.jpg);">
+                        <div class="content">
+                            <div class="name">Kedah</div>
+                            <div class="des">The Rice Bowl of Malaysia, Kedah is rich in agricultural heritage and home to Langkawi, a renowned island destination.</div>
+                            <a href="kedah.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/penangbg.jpg);">
+                        <div class="content">
+                            <div class="name">Penang</div>
+                            <div class="des">Penang, known as the Pearl of the Orient, offers a blend of history, culture, and famous street food.</div>
+                            <a href="pulaupinang.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/perakbg.jpg);">
+                        <div class="content">
+                            <div class="name">Perak</div>
+                            <div class="des">Rich in history and natural beauty, Perak is home to the royal town of Kuala Kangsar and the popular island of Pangkor.</div>
+                            <a href="perak.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/kelantanbg.jpg);">
+                        <div class="content">
+                            <div class="name">Kelantan</div>
+                            <div class="des">Kelantan, a bastion of Malay culture, offers unique traditions, crafts, and delicious local delicacies.</div>
+                            <a href="kelantan.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/terengganubg.jpg);">
+                        <div class="content">
+                            <div class="name">Terengganu</div>
+                            <div class="des">Terengganu boasts stunning islands, beaches, and a rich cultural heritage, famous for its batik and traditional crafts.</div>
+                            <a href="terengganu.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/pahangbg.jpg);">
+                        <div class="content">
+                            <div class="name">Pahang</div>
+                            <div class="des">The largest state in Peninsular Malaysia, Pahang is known for its tropical rainforests, highlands, and beautiful beaches.</div>
+                            <a href="pahang.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/selangorbg.jpg);">
+                        <div class="content">
+                            <div class="name">Selangor</div>
+                            <div class="des">Selangor, the most developed state, is a hub of modern amenities, historic landmarks, and cultural diversity.</div>
+                            <a href="selangor.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/negerisembilanbg.jpg);">
+                        <div class="content">
+                            <div class="name">Negeri Sembilan</div>
+                            <div class="des">Negeri Sembilan is known for its unique Minangkabau architecture and traditions, offering a rich cultural experience.</div>
+                            <a href="negerisembilan.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/melakabg.jpg);">
+                        <div class="content">
+                            <div class="name">Melaka</div>
+                            <div class="des">Melaka, a UNESCO World Heritage site, is famed for its historical landmarks and a melting pot of cultures.</div>
+                            <a href="melaka.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/johorbg.jpg);">
+                        <div class="content">
+                            <div class="name">Johor</div>
+                            <div class="des">Johor, located at the southern tip of the Malay Peninsula, is known for its vibrant cities and pristine natural landscapes.</div>
+                            <a href="johor.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/sabahbg.jpg);">
+                        <div class="content">
+                            <div class="name">Sabah</div>
+                            <div class="des">Sabah, the Land Below the Wind, offers breathtaking natural wonders, including Mount Kinabalu and diverse wildlife.</div>
+                            <a href="sabah.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/sarawakbg.jpg);">
+                        <div class="content">
+                            <div class="name">Sarawak</div>
+                            <div class="des">Sarawak, the largest state in Malaysia, is known for its rainforests, indigenous cultures, and the majestic Sarawak River.</div>
+                            <a href="sarawak.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/KLbg.jpg);">
+                        <div class="content">
+                            <div class="name">Kuala Lumpur</div>
+                            <div class="des">Malaysia's capital, Kuala Lumpur, is a bustling metropolis known for its iconic skyline, vibrant culture, and diverse cuisine.</div>
+                            <a href="kualalumpur.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/labuanbg.jpg);">
+                        <div class="content">
+                            <div class="name">Labuan</div>
+                            <div class="des">Labuan, an offshore financial center, is also known for its duty-free shopping, shipwreck diving, and tranquil beaches.</div>
+                            <a href="labuan.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="item" style="background-image: url(/img/putrajayabg.jpg);">
+                        <div class="content">
+                            <div class="name">Putrajaya</div>
+                            <div class="des">Putrajaya, the administrative capital of Malaysia, is renowned for its modern architecture and beautifully landscaped gardens.</div>
+                            <a href="putrajaya.html"><button>See More</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+<!--==================== SHARE ====================-->
+<section class="share section">
+    <div class="share__bg">
+        <div class="share__container container">
+            <h2 class="section__title share__title">Share Our Website</h2>
+            <p class="share__description">Help spread the word by sharing our website on your favorite platforms.</p>
+            
+            <div class="share__buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_WEBSITE_URL" target="_blank" class="share__button">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=YOUR_WEBSITE_URL" target="_blank" class="share__button">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_WEBSITE_URL" target="_blank" class="share__button">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+                <a href="https://pinterest.com/pin/create/button/?url=YOUR_WEBSITE_URL" target="_blank" class="share__button">
+                    <i class="ri-pinterest-fill"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer section">
+  <div class="footer__container container grid">
+      <div class="footer__content grid">
+          <div class="footer__data">
+              <h3 class="footer__title">Malaysia</h3>
+              <p class="footer__description">Discover the wonders of <br>Malaysia where every step <br>tells a story.
+              </p>
+              <div>
+                  <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                      <i class="ri-facebook-box-fill"></i>
+                  </a>
+                  <a href="https://twitter.com/" target="_blank" class="footer__social">
+                      <i class="ri-twitter-fill"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                      <i class="ri-instagram-fill"></i>
+                  </a>
+                  <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                      <i class="ri-youtube-fill"></i>
+                  </a>
+              </div>
+          </div>
+
+          <div class="footer__data">
+              <h3 class="footer__subtitle">About</h3>
+              <ul>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">About Us</a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">Features</a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">New & Blog</a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="footer__data">
+              <h3 class="footer__subtitle">Company</h3>
+              <ul>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">Team</a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">Plan y Pricing</a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">Become a member</a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="footer__data">
+              <h3 class="footer__subtitle">Support</h3>
+              <ul>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">FAQs</a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">Support Center</a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="" class="footer__link">Contact Us</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="footer__rights">
+          <p class="footer__copy">&#169; 2024 UCCD2323 Group 23 . All rigths reserved.</p>
+          <div class="footer__terms">
+              <a href="#" class="footer__terms-link">Terms & Agreements</a>
+              <a href="#" class="footer__terms-link">Privacy Policy</a>
+          </div>
+      </div>
+  </div>
+  </footer>
+
+
+  <!--========== SCROLL UP ==========-->
+  <a href="#" class="scrollup" id="scroll-up">
+  <i class="ri-arrow-up-line scrollup__icon"></i>
+  </a>
+
+  <!-- Optional: Add some script to make the counters dynamic -->
+  <script src="/js/main.js"></script>
+  <!--=============== SCROLL REVEAL===============-->
+  <script src="/js/scrollreveal.min.js"></script>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="/js/swiper-bundle.min.js"></script>
+  
+  
+  <!--=============== MAP JS for map section logic ===============-->
+  <script src="/js/map.js"></script>
+  
+  <!--=============== SWIPER/SLIDER JS for region card animation ===============-->
+  <script src="/js/slider.js"></script>
+  
+  <!--=============== GSAP JS ===============-->
+  <script src="js/gsap.min.js"></script>
+  
+  <!--=============== APP JS for most of the logic ===============-->
+  <script src="js/app.js" defer></script>
+  
+  <!--=============== COOKIES JS for cookies consent ===============-->
+  <script src="js/cookies.js" defer></script>
+  
+  <!--=============== LOGOUT JS for login and logout button ===============-->
+  <script src="/js/logout.js"></script>
+
+</body>
+
+</html>
