@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (storedPassword == password) {
             localStorage.setItem('currentUser', username);
-            window.location = 'profile.html';
+            window.location = 'home.html';
         } else {
             alert('Invalid username or password!');
             loginForm.reset();
