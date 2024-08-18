@@ -10,6 +10,7 @@ cultural heritage, and travel tips to help users explore Malaysia's beauty.
 
 Features
 -User Login: Implemented using local storage to provide a personalized experience.
+-Profile: A place to manage your saved links and personal informations.
 -Cookies Consent: Cookies are used to store user consent and session-related data.
 -Interactive Map: SVG maps are utilized to provide an engaging way to explore destinations.
 -Mobile Responsive: The website adjusts its styling according to screen size for optimal viewing on all devices.
@@ -24,6 +25,9 @@ Known Issues
 -The interactive map may be cut off on smaller screens, so it is disabled for small screens. However, the issue persists on some screen sizes.
 -The parallax scrolling effect sizes correctly only when the page is initially loaded. Refresh the page if you change the screen size to ensure proper display.
 -Some CSS styling for mobile responsiveness may not be perfect due to untested extreme cases.
+-Styling may not be consistent through out the websites as it's not made by same person.
+-Profile page only accessible from mainpage.
+-No login/profile related information displayed on other page outside of mainpage.
 
 Contributing
 -Lai Kin Chung
