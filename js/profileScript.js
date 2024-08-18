@@ -101,11 +101,20 @@ function loadProfileData() {
         document.getElementById("phone").value = localStorage.getItem(`${username}_phone`) || "";
 
         const savedImage = localStorage.getItem(`${username}_profilePicture`);
+        const profileHeaderImage = document.getElementById("profileHeaderImage");
+
         if (savedImage) {
-            document.getElementById("profileHeaderImage").src = savedImage;
+            profileHeaderImage.src = savedImage;
+        } else {
+            // Set to default image if no profile picture is found in localStorage
+            profileHeaderImage.src = "/images/default-profile.png";
         }
+    } else {
+        // If no user is logged in, also set the default image
+        document.getElementById("profileHeaderImage").src = "/images/default-profile.png";
     }
 }
+
 
 function loadBookmarkData() {
     const username = localStorage.getItem("currentUser");
