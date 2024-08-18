@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Login successful!");
 
             // Redirect to index.html after successful login
-            window.location.href = "index.html";
+            window.location.href = "home.html";
         } else {
             alert("Invalid username or password.");
         }

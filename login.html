@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="assets/img/flag.png" type="image/png">
-<title>Login/Register Form</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap">
-<!--=============== CSS ===============-->
-<link rel="stylesheet" href="/css/login.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="/css/loginStyle.css">
 </head>
 <body>
 
-<div class="login-page">
-  <div class="center">
-    <h1>Login/Register Form</h1>
-    <form id="loginForm" class="login-form">
-      <div class="txt_field">
-        <input type="text" id="loginUsername" required>
-        <span></span>
-        <label>Username</label>
-      </div>
-      <div class="txt_field">
-        <input type="password" id="loginPassword" required>
-        <span></span>
-        <label>Password</label>
-      </div>
-      <input type="submit" value="Login">
-      <!-- Include Forgot Password link here -->
-      <a href="#" id="forgotPasswordLink">Forgot Password?</a>
-    </form>
-    <form id="registerForm" class="register-form" style="display:none;">
-      <div class="txt_field">
-        <input type="text" id="registerUsername" required>
-        <span></span>
-        <label>Username</label>
-      </div>
-      <div class="txt_field">
-        <input type="password" id="registerPassword" required>
-        <span></span>
-        <label>Password</label>
-      </div>
-      <input type="submit" value="Register">
-    </form>
-    <div class="signup_link">
-      <p id="switchForm">Don't have an account? Register here. <a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+    <!-- Hold -->
+    <div class="hold" id="hold">
+        <a href="home.html" class="btn-back">
+            <img src="/images/arrow.png" alt="Back" class="back-icon">
+        </a>
     </div>
-  </div>
-</div>
 
-<!--=============== Log In JS ===============-->
-<script src="/js/login.js"></script>
+    <!-- Login form -->
+    <div class="container">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Username" required>
+                <img src="/images/user.png" alt="User">
+            </div>
 
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password" required>
+                <img src="/images/pass.png" alt="Password">
+            </div>
+
+            <button type="submit" id="loginButton" class="btn-login"> Login </button>
+
+            <div class="register-link">
+                <p> Don't have an account? 
+                    <a href="#" id="showRegisterForm"> Register</a>
+                </p>
+            </div>
+        </form>
+
+    <!-- Register form -->
+        <form id="registerForm" style="display: none;">
+            <h1>Register</h1>
+            <div class="form-group">
+                <input type="text" id="registerUsername" placeholder="Username" required>
+                <img src="/images/user.png" alt="User">
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <img src="/images/pass.png" alt="Password">
+            </div>
+
+            <button type="submit" id="registerButton" class="btn-login"> Register </button>
+
+            <div class="login-link">
+                <p> Already have an account? 
+                <a href="#" id="showLoginForm"> Login</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <script src="/js/loginScript.js"></script>
 </body>
 </html>

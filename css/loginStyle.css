@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: white;
+    background: url('/images/background1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    width: 450px;
+    padding: 30px 40px;
+    border: 2px solid white;
+    box-shadow: 0 0 5px white;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.container h1 {
+    font-size: 35px;
+}
+
+.container .form-group {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 35px 0;
+}
+
+.container .btn-login {
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 0 0 10px white;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container .register-link,
+.container .login-link {
+    font-size: 15px;
+    margin: 20px 0 15px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    padding: 20px 45px 20px 20px;
+    border: 2px solid darkgray;
+    border-radius: 40px;
+    color: white;;
+    background: transparent;
+}
+
+.form-group input::placeholder {
+    color: white;
+}
+
+.form-group img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.register-link p a,
+.login-link p a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+.register-link p a:hover,
+.login-link p a:hover {
+    text-decoration: underline;
+}
+
+.hold {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    padding-left: 20px;
+}
+
+.hold .btn-back {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hold .btn-back:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 75%;
+    }
+}
+
+

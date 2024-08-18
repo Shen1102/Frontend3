@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initial state setup
     function updateUI() {
-        const username = localStorage.getItem("loggedInUser");
+        const username = localStorage.getItem("currentUser");
 
         if (username) {
             loginButton.style.display = "none";
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (logoutButton) {
         logoutButton.addEventListener("click", function() {
             // Remove the username from localStorage
-            localStorage.removeItem("loggedInUser");
+            localStorage.removeItem("currentUser");
             alert("Logged out successfully!");
 
             // Update UI after logout

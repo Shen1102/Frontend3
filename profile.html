@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/profileStyle.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="toggle">
+            <button id="toggleSidebar" class="btn-toggle">☰</button>
+        </div>
+        <a href="home.html" class="btn-back">
+            <img src="/images/arrow.png" alt="Back" class="back-icon">
+        </a>
+        <h3>Profile</h3>
+        <a href="#profileSection">Personal Information</a>
+        <a href="#savedContentSection">Bookmark Contents</a>
+        <a href="#privacySettingsSection">Privacy Settings</a>
+        <a href="#notificationsSection">Notifications</a>
+        <a href="#securitySection">Account Security</a>
+        <a href="login.html" class="btn-logout">Logout</a>
+    </div>
+
+    <div class="main">
+        <!-- Profile header -->
+        <div id="profileHeader" class="header">
+            <img id="profileHeaderImage" src="#" alt="Profile Image" class="image">
+            <h1 id="welcomeMessage">Welcome, <span id="profileUsername"></span>!</h1>
+        </div>
+
+        <!-- Personal information -->
+        <div id="profileSection" class="container">
+            <h2>Personal Information</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="profilePicture">Profile Picture</label>
+                    <input type="file" class="form-control-file" id="profilePicture">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                </div>
+                <button type="button" class="btn-save" id="saveProfile">Save Profile</button>
+            </form>
+        </div>
+
+        <!-- Bookmark contents -->
+        <div id="savedContentSection" class="container">
+            <h2>Bookmark Contents</h2>
+            <form id="bookmarkForm">
+                <div id="bookmarkContainer">
+                    <div class="form-group bookmark-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="savedArticles1" placeholder="Enter article link">
+                            <div class="input-group-append">
+                                <button type="button" class="btn-add" title="Add another link">+</button>
+                                <button type="button" class="btn-remove" title="Remove this link">−</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn-save" id="saveContent">Save Content</button>
+            </form>
+        </div>
+        
+        <!-- Privacy settings -->
+        <div id="privacySettingsSection" class="container">
+            <h2>Privacy Settings</h2>
+            <form id="privacyForm">
+                <div class="form-group">
+                    <label for="profileVisibility">Profile Visibility</label>
+                    <select class="form-control" id="profileVisibility">
+                        <option>Public</option>
+                        <option>Friends Only</option>
+                        <option>Private</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contentSharing">Content Sharing</label>
+                    <select class="form-control" id="contentSharing">
+                        <option>Everyone</option>
+                        <option>Friends Only</option>
+                        <option>Private</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-save" id="savePrivacySettings">Save Settings</button>
+            </form>
+        </div>
+
+        <!-- Notifications -->
+        <div id="notificationsSection" class="container">
+            <h2>Notifications</h2>
+            <form id="notificationsForm">
+                <div class="form-group">
+                    <label for="newsletterPreferences">Newsletter Preferences</label>
+                    <select class="form-control" id="newsletterPreferences">
+                        <option>Once a week</option>
+                        <option>Once a month</option>
+                        <option>Never</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-save" id="saveNotifications">Save Notifications</button>
+            </form>
+        </div>
+
+        <!-- Security settings -->
+        <div id="securitySection" class="container">
+            <h2>Account Security</h2>
+            <form id="securityForm">
+                <div class="form-group">
+                    <label for="passwordFirst">New Password</label>
+                    <input type="password" class="form-control" id="passwordFirst" placeholder="Change your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="passwordSecond">Confirm Password</label>
+                    <input type="password" class="form-control" id="passwordSecond" placeholder="Enter again new password" required>
+                </div>
+                <button type="button" class="btn-save" id="saveSecuritySettings">Save Security Settings</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/profileScript.js"></script>
+</body>
+</html>
