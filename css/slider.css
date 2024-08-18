@@ -1,0 +1,233 @@
+:root {
+    --header-height: 3rem;
+  
+    /*========== Colors ==========*/
+    /* Change favorite color to match images */
+    /*Green dark 190 - Green 171 - Grren Blue 200*/
+    --hue-color: 190;
+  
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 64%, 22%);
+    --first-color-second: hsl(var(--hue-color), 64%, 22%);
+    --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+    --title-color: hsl(var(--hue-color), 64%, 18%);
+    --text-color: hsl(var(--hue-color), 24%, 35%);
+    --text-color-light: hsl(var(--hue-color), 8%, 60%);
+    --input-color: hsl(var(--hue-color), 24%, 97%);
+    --body-color: hsl(var(--hue-color), 100%, 99%);
+    --white-color: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== Margenes Bottom ==========*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  
+    /*========== Hover overlay ==========*/
+    --img-transition: .3s;
+    --img-hidden: hidden;
+    --img-scale: scale(1.1);
+  }
+        
+            .section__title {
+            font-size: var(--h2-font-size);
+            color: var(--title-color);
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: var(--mb-2);
+             }
+           
+
+            .region__description {
+            max-width: 600px; /* Set a maximum width for the description */
+            margin: 40px auto 20px; /* Increase the margin-top to add space between the map and the region description */
+            text-align: center; /* Center the text */
+            font-size: 1rem; /* Adjust font size if necessary */
+            line-height: 1.6; /* Improve readability */
+            color: var(--text-color); /* Use the default text color */
+            }
+
+            /* Slider Container Styling */
+            .container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--body-color); /* Match body color */
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            }
+
+            /* Swiper Container Styling */
+            .swiper-container {
+            width: 100%; /* Leave space on sides */
+            margin: 0 auto;
+            height: 100%;
+            }
+
+            /* Swiper Wrapper */
+            .swiper-wrapper {
+            display: flex;
+            }
+
+            /* Swiper Slide Styling */
+            .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px; /* Smaller width for each slide */
+            }
+
+            /* Item Styling */
+            .item {
+            top: -70px;
+            width: 100%;
+            height: 300px;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+            }
+
+            /* Content Styling */
+            .item .content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            color: var(--white-color);
+            background: transparent;
+            padding: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            }
+
+            .content .name {
+            font-size: 22px;
+            text-transform: uppercase;
+            font-weight: var(--font-semi-bold);
+            margin-bottom: 10px;
+            color: var(--text-color); /* Match the primary color */
+            }
+
+            .content .des {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: var(--text-color); /* Match the light text color */
+            text-overflow: ellipsis;
+            }
+
+            .content button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background: var(--first-color);
+            color: var(--white-color);
+            font-weight: var(--font-medium);
+            cursor: pointer;
+            transition: background 0.3s ease;
+            }
+
+            .content button:hover {
+            background: var(--first-color-alt);
+            }
+
+            /* Swiper Pagination Styling */
+            .swiper-pagination {
+            bottom: 10px;
+            }
+
+            .swiper-pagination-bullet {
+            background: var(--first-color);
+            }
+
+            .swiper-pagination-bullet-active {
+            background: var(--first-color-alt);
+            }
+
+            /* Swiper Navigation Buttons */
+            .swiper-button-next,
+            .swiper-button-prev {
+            color: var(--first-color);
+            }
+
+            .swiper-button-next:hover,
+            .swiper-button-prev:hover {
+            color: var(--first-color-alt);
+            }
+
+            @media (max-width: 768px) {
+              .swiper-slide {
+                width: 200px;
+              }
+            
+              .item {
+                height: 300px;
+              }
+            
+              .content .name {
+                font-size: 20px;
+              }
+            
+              .content .des {
+                font-size: 14px;
+              }
+            
+              .content button {
+                padding: 6px 12px;
+              }
+            }
+            
+            @media (max-width: 576px) {
+              .swiper-container {
+                width: 90%;
+              }
+            
+              .swiper-slide {
+                width: 180px;
+              }
+            
+              .item {
+                height: 250px;
+              }
+            
+              .content .name {
+                font-size: 18px;
+              }
+            
+              .content .des {
+                font-size: 12px;
+              }
+            
+              .content button {
+                padding: 6px 10px;
+              }
+            }
